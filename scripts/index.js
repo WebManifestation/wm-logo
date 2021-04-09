@@ -55,7 +55,7 @@ const gltfLoader = new THREE.GLTFLoader(rootLoader);
 const textureLoader = new THREE.TextureLoader(rootLoader);
 
 //Load Texture
-const bakedTexture = textureLoader.load("../assets/final.jpg");
+const bakedTexture = textureLoader.load("assets/final.jpg");
 bakedTexture.flipY = false;
 bakedTexture.encoding = THREE.sRGBEncoding;
 
@@ -64,7 +64,7 @@ const baseMaterial = new THREE.MeshBasicMaterial({
 });
 
 //Load mesh
-gltfLoader.load("../assets/wm.glb", (gltf) => {
+gltfLoader.load("assets/wm.glb", (gltf) => {
   gltf.scene.scale.set(50, 50, 50);
   gltf.scene.position.z = 100
   gltf.scene.traverse((child) => {
